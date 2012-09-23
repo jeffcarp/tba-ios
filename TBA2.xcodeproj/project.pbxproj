@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F925CA26160D134F000BBB1C /* Screen Shot 2012-09-21 at 2.25.15 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = F925CA25160D134F000BBB1C /* Screen Shot 2012-09-21 at 2.25.15 PM.png */; };
+		F925CA28160D1386000BBB1C /* Screen Shot 2012-09-21 at 2.28.06 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = F925CA27160D1386000BBB1C /* Screen Shot 2012-09-21 at 2.28.06 PM.png */; };
+		F925CA2A160D1964000BBB1C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F925CA29160D1964000BBB1C /* Default-568h@2x.png */; };
 		F9300D8D160942DE00887EBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9300D8C160942DE00887EBF /* UIKit.framework */; };
 		F9300D8F160942DE00887EBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9300D8E160942DE00887EBF /* Foundation.framework */; };
 		F9300D91160942DE00887EBF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9300D90160942DE00887EBF /* CoreGraphics.framework */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F925CA25160D134F000BBB1C /* Screen Shot 2012-09-21 at 2.25.15 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2012-09-21 at 2.25.15 PM.png"; sourceTree = "<group>"; };
+		F925CA27160D1386000BBB1C /* Screen Shot 2012-09-21 at 2.28.06 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2012-09-21 at 2.28.06 PM.png"; sourceTree = "<group>"; };
+		F925CA29160D1964000BBB1C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F9300D88160942DE00887EBF /* TBA2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBA2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9300D8C160942DE00887EBF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9300D8E160942DE00887EBF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +71,9 @@
 		F9300D7D160942DE00887EBF = {
 			isa = PBXGroup;
 			children = (
+				F925CA29160D1964000BBB1C /* Default-568h@2x.png */,
+				F925CA27160D1386000BBB1C /* Screen Shot 2012-09-21 at 2.28.06 PM.png */,
+				F925CA25160D134F000BBB1C /* Screen Shot 2012-09-21 at 2.25.15 PM.png */,
 				F9300D92160942DE00887EBF /* TBA2 */,
 				F9300D8B160942DE00887EBF /* Frameworks */,
 				F9300D89160942DE00887EBF /* Products */,
@@ -181,6 +190,9 @@
 				F9300DAE160942DE00887EBF /* second@2x.png in Resources */,
 				F9FBA362160A730C00F954A2 /* 124-bullhorn.png in Resources */,
 				F9FBA365160A731600F954A2 /* 125-food.png in Resources */,
+				F925CA26160D134F000BBB1C /* Screen Shot 2012-09-21 at 2.25.15 PM.png in Resources */,
+				F925CA28160D1386000BBB1C /* Screen Shot 2012-09-21 at 2.28.06 PM.png in Resources */,
+				F925CA2A160D1964000BBB1C /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +254,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -262,7 +274,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -275,6 +287,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBA2/TBA2-Prefix.pch";
 				INFOPLIST_FILE = "TBA2/TBA2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -286,6 +299,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBA2/TBA2-Prefix.pch";
 				INFOPLIST_FILE = "TBA2/TBA2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

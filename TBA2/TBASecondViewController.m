@@ -44,7 +44,8 @@
         CGFloat xOrigin = i * scrollView.frame.size.width;
         UIWebView *awesomeView = [[UIWebView alloc] initWithFrame:CGRectMake(xOrigin, 0, scrollView.frame.size.width, scrollView.frame.size.height)];
                 
-        NSURL *url = [NSURL URLWithString:@"http://localhost:3000/mobile/dining_hall"];
+//        NSURL *url = [NSURL URLWithString:@"http://localhost:3000/mobile/dining_hall"];
+        NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
         [awesomeView loadRequest:requestObj];
         

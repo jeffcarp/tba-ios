@@ -25,7 +25,7 @@
     
 //    self.firstButton.title = @"Stuff";
 
-    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/mobile"];
+    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
 }
