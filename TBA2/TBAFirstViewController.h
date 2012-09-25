@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TBAFirstViewController : UIViewController
-
+@property(nonatomic,assign) id<UIWebViewDelegate> delegate;
 @end

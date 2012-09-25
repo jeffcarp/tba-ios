@@ -52,7 +52,7 @@
         } else if (i == 2) {
             url = [NSURL URLWithString:@"http://announcements.io/mobile/bobs"];
         }
-//        NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
+
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
         [awesomeView loadRequest:requestObj];
         
