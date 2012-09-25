@@ -46,11 +46,11 @@
 
         NSURL *url;
         if (i == 0) {
-            url = [NSURL URLWithString:@"http://announcements.io/mobile/dining_hall/foss"];
+            url = [NSURL URLWithString:@"http://announcements.io/mobile/foss"];
         } else if (i == 1) {
-            url = [NSURL URLWithString:@"http://announcements.io/mobile/dining_hall/dana"];
+            url = [NSURL URLWithString:@"http://announcements.io/mobile/dana"];
         } else if (i == 2) {
-            url = [NSURL URLWithString:@"http://announcements.io/mobile/dining_hall/bobs"];
+            url = [NSURL URLWithString:@"http://announcements.io/mobile/bobs"];
         }
 //        NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];

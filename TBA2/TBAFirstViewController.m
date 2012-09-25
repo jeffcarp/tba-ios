@@ -21,11 +21,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 	// Do any additional setup after loading the view, typically from a nib.
     
 //    self.firstButton.title = @"Stuff";
 
-    NSURL *url = [NSURL URLWithString:@"http://announcements.io/mobile"];
+    NSURL *url = [NSURL URLWithString:@"http://announcements.io/mobile/dashboard"];
+
+//    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"dashboard" ofType:@"html"];
+//    NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+//    NSString *path = [[NSBundle mainBundle] bundlePath];
+//    NSURL *baseURL = [NSURL fileURLWithPath:path];
+//    [webView loadHTMLString:htmlString baseURL:baseURL];
+    
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
 }
