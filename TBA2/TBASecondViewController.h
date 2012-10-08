@@ -10,4 +10,6 @@
 
 @interface TBASecondViewController : UIViewController
 
+@property(nonatomic,assign) id<UIWebViewDelegate> delegate;
+
 @end

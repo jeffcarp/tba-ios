@@ -126,6 +126,27 @@
         <image name="124-bullhorn.png" width="24" height="17"/>
         <image name="125-food.png" width="29" height="23"/>
     </resources>
+    <classes>
+        <class className="TBAFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TBAFirstViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="firstButton" candidateClass="UITabBarItem"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="TBASecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TBASecondViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bobsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="danaButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="diningHallView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="fossButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="secondButton" candidateClass="UITabBarItem"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -8,7 +8,13 @@
 
 #import "TBAAppDelegate.h"
 
+@interface TBAAppDelegate ()
+@property (strong, nonatomic) NSDate *lastLoad;
+@end
+
 @implementation TBAAppDelegate
+
+@synthesize lastLoad = _lastLoad;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -10,4 +10,8 @@
 
 @interface TBAFirstViewController : UIViewController
 @property(nonatomic,assign) id<UIWebViewDelegate> delegate;
+
+-(void)deployActivityIndicator;
+-(void)removeActivityIndicator;
+
 @end
