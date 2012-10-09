@@ -37,12 +37,43 @@
     [self.webView loadRequest:requestObj];   
 }
 
+- (BOOL)canBecomeFirstResponder
+{
+    return true;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    // shake it like a salt shaker
+    if (motion == UIEventSubtypeMotionShake) {
+        
+        // take web view away
+        self.webView.hidden = true;
+        
+        // start activity indicator
+        [self deployActivityIndicator];
+        
+        // send another request
+        
+        NSURL *url = [NSURL URLWithString:@"http://announcements.io/mobile/dashboard"];
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+        [self.webView loadRequest:requestObj];
+        
+        // webViewDidFinishLoad will handle it from there? maybe?
+
+    }
+    [super motionEnded:motion withEvent:event];
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    NSLog(@"webViewDidFinishLoad");
+    
     [self removeActivityIndicator];
     
     [self.view addSubview:self.webView];
     [self.view bringSubviewToFront:self.webView];
+    self.webView.hidden = false;
 }
 
 -(void)deployActivityIndicator

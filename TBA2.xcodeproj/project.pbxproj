@@ -26,9 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F925CA25160D134F000BBB1C /* Screen Shot 2012-09-21 at 2.25.15 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2012-09-21 at 2.25.15 PM.png"; sourceTree = "<group>"; };
-		F925CA27160D1386000BBB1C /* Screen Shot 2012-09-21 at 2.28.06 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2012-09-21 at 2.28.06 PM.png"; sourceTree = "<group>"; };
-		F925CA29160D1964000BBB1C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F925CA25160D134F000BBB1C /* Screen Shot 2012-09-21 at 2.25.15 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2012-09-21 at 2.25.15 PM.png"; path = "../Screen Shot 2012-09-21 at 2.25.15 PM.png"; sourceTree = "<group>"; };
+		F925CA27160D1386000BBB1C /* Screen Shot 2012-09-21 at 2.28.06 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2012-09-21 at 2.28.06 PM.png"; path = "../Screen Shot 2012-09-21 at 2.28.06 PM.png"; sourceTree = "<group>"; };
+		F925CA29160D1964000BBB1C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		F9300D88160942DE00887EBF /* TBA2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBA2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9300D8C160942DE00887EBF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9300D8E160942DE00887EBF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,9 +67,6 @@
 		F9300D7D160942DE00887EBF = {
 			isa = PBXGroup;
 			children = (
-				F925CA29160D1964000BBB1C /* Default-568h@2x.png */,
-				F925CA27160D1386000BBB1C /* Screen Shot 2012-09-21 at 2.28.06 PM.png */,
-				F925CA25160D134F000BBB1C /* Screen Shot 2012-09-21 at 2.25.15 PM.png */,
 				F9300D92160942DE00887EBF /* TBA2 */,
 				F9300D8B160942DE00887EBF /* Frameworks */,
 				F9300D89160942DE00887EBF /* Products */,
@@ -124,6 +121,9 @@
 		F9A96FD11624D9B90021C39D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F925CA29160D1964000BBB1C /* Default-568h@2x.png */,
+				F925CA27160D1386000BBB1C /* Screen Shot 2012-09-21 at 2.28.06 PM.png */,
+				F925CA25160D134F000BBB1C /* Screen Shot 2012-09-21 at 2.25.15 PM.png */,
 				F9A96FDA1624DA5E0021C39D /* 124-bullhorn.png */,
 				F9A96FDB1624DA5E0021C39D /* 124-bullhorn@2x.png */,
 				F9A96FDC1624DA5E0021C39D /* 125-food.png */,
