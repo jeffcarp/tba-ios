@@ -18,7 +18,7 @@
 
 @implementation TBAFirstViewController
 
-@synthesize webView;
+@synthesize webView = _webView;
 @synthesize firstButton;
 @synthesize activityIndicator;
 
@@ -42,11 +42,25 @@
     return true;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{    
+    [super viewDidAppear:animated];
+    
+    [self becomeFirstResponder];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{   
+    [super viewDidDisappear:animated];
+    
+    [self resignFirstResponder];
+}
+
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     // shake it like a salt shaker
     if (motion == UIEventSubtypeMotionShake) {
-        
+        NSLog(@"motionEnded");
         // take web view away
         self.webView.hidden = true;
         
@@ -59,7 +73,7 @@
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:requestObj];
         
-        // webViewDidFinishLoad will handle it from there? maybe?
+        // webViewDidFinishLoad will handle it from there
 
     }
     [super motionEnded:motion withEvent:event];

@@ -59,7 +59,7 @@
         UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         activityIndicator.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height);
         activityIndicator.center = CGPointMake(xCenter, self.view.center.y-50.0);
-        activityIndicator.tag = i;
+        activityIndicator.tag = i+1;
         [scrollView addSubview:activityIndicator];
         
         [activityIndicator startAnimating];
@@ -80,9 +80,28 @@
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
         [webView loadRequest:requestObj];
         webView.hidden = TRUE;
-        webView.tag = i+3;
+        webView.tag = i+4;
         [scrollView addSubview:webView];
     }
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    return true;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self becomeFirstResponder];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [self resignFirstResponder];
 }
 
 - (IBAction)fossButton:(id)sender {
@@ -119,36 +138,59 @@
     }
 }
 
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    // shake it like a salt shaker
+    if (motion == UIEventSubtypeMotionShake) {
+        NSLog(@"motionEnded");
+
+        UIWebView *fossWebView = (UIWebView *)[scrollView viewWithTag:4];
+        fossWebView.hidden = YES;
+        
+        UIWebView *danaWebView = (UIWebView *)[scrollView viewWithTag:5];
+        danaWebView.hidden = YES;
+        
+        UIWebView *bobsWebView = (UIWebView *)[scrollView viewWithTag:6];
+        bobsWebView.hidden = YES;
+        
+        // start activity indicator (so I believe it's been spinning this whole time)
+        
+        // send another request
+        
+        NSURL *fossUrl = [NSURL URLWithString:@"http://announcements.io/mobile/foss"];
+        NSURLRequest *fossRequestObj = [NSURLRequest requestWithURL:fossUrl];
+        [fossWebView loadRequest:fossRequestObj];
+        
+        NSURL *danaUrl = [NSURL URLWithString:@"http://announcements.io/mobile/dana"];
+        NSURLRequest *danaRequestObj = [NSURLRequest requestWithURL:danaUrl];
+        [danaWebView loadRequest:danaRequestObj];
+        
+        NSURL *bobsUrl = [NSURL URLWithString:@"http://announcements.io/mobile/bobs"];
+        NSURLRequest *bobsRequestObj = [NSURLRequest requestWithURL:bobsUrl];
+        [bobsWebView loadRequest:bobsRequestObj];
+        
+        // webViewDidFinishLoad will handle it from there        
+    }
+    [super motionEnded:motion withEvent:event];
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
        
-    webView.hidden = FALSE;
-
-    // stop activity indicator
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-//    UIActivityIndicatorView *activityIndicator = (UIActivityIndicatorView *)[scrollView viewWithTag:0];
-//    [activityIndicator stopAnimating];
-//    activityIndicator.hidden = TRUE;
+    webView.hidden = NO;
     
-    if (webView.frame.origin.x == 0) {
-        NSLog(@"one");
-    } else if (webView.frame.origin.x == scrollView.frame.size.width * 1) {
-        NSLog(@"two");
-    } else if (webView.frame.origin.x == scrollView.frame.size.width * 2) {
-        NSLog(@"three");
-    }
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 - (void)viewDidUnload
 {
+    // Release subviews
     [self setSecondButton:nil];
     [self setScrollView:nil];
     [self setDiningHallView:nil];
     [self setDanaButton:nil];
     [self setFossButton:nil];
     [self setBobsButton:nil];
-    // release other subviews
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
