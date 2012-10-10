@@ -153,7 +153,9 @@
         UIWebView *bobsWebView = (UIWebView *)[scrollView viewWithTag:6];
         bobsWebView.hidden = YES;
         
-        // start activity indicator (so I believe it's been spinning this whole time)
+        // start activity indicators (I believe the center one been spinning this whole time)
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         
         // send another request
         
