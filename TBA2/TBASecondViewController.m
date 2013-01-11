@@ -142,7 +142,6 @@
 {
     // shake it like a salt shaker
     if (motion == UIEventSubtypeMotionShake) {
-        NSLog(@"motionEnded");
 
         UIWebView *fossWebView = (UIWebView *)[scrollView viewWithTag:4];
         fossWebView.hidden = YES;

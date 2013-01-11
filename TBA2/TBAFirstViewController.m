@@ -60,7 +60,6 @@
 {
     // shake it like a salt shaker
     if (motion == UIEventSubtypeMotionShake) {
-        NSLog(@"motionEnded");
         // take web view away
         self.webView.hidden = true;
         
@@ -80,9 +79,7 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
-{
-    NSLog(@"webViewDidFinishLoad");
-    
+{    
     [self removeActivityIndicator];
     
     [self.view addSubview:self.webView];
