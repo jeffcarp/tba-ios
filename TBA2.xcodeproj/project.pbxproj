@@ -16,7 +16,6 @@
 		F9300D97160942DE00887EBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9300D95160942DE00887EBF /* InfoPlist.strings */; };
 		F9300D99160942DE00887EBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9300D98160942DE00887EBF /* main.m */; };
 		F9300D9D160942DE00887EBF /* TBAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9300D9C160942DE00887EBF /* TBAAppDelegate.m */; };
-		F9300DA0160942DE00887EBF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9300D9E160942DE00887EBF /* MainStoryboard.storyboard */; };
 		F9300DA3160942DE00887EBF /* TBAFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9300DA2160942DE00887EBF /* TBAFirstViewController.m */; };
 		F9300DAA160942DE00887EBF /* TBASecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9300DA9160942DE00887EBF /* TBASecondViewController.m */; };
 		F9A96FDE1624DA5E0021C39D /* 124-bullhorn.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A96FDA1624DA5E0021C39D /* 124-bullhorn.png */; };
@@ -39,7 +38,6 @@
 		F9300D9A160942DE00887EBF /* TBA2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBA2-Prefix.pch"; sourceTree = "<group>"; };
 		F9300D9B160942DE00887EBF /* TBAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBAAppDelegate.h; sourceTree = "<group>"; };
 		F9300D9C160942DE00887EBF /* TBAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBAAppDelegate.m; sourceTree = "<group>"; };
-		F9300D9F160942DE00887EBF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F9300DA1160942DE00887EBF /* TBAFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBAFirstViewController.h; sourceTree = "<group>"; };
 		F9300DA2160942DE00887EBF /* TBAFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBAFirstViewController.m; sourceTree = "<group>"; };
 		F9300DA8160942DE00887EBF /* TBASecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBASecondViewController.h; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 				F9A96FD11624D9B90021C39D /* Assets */,
 				F9300D9B160942DE00887EBF /* TBAAppDelegate.h */,
 				F9300D9C160942DE00887EBF /* TBAAppDelegate.m */,
-				F9300D9E160942DE00887EBF /* MainStoryboard.storyboard */,
 				F9300DA1160942DE00887EBF /* TBAFirstViewController.h */,
 				F9300DA2160942DE00887EBF /* TBAFirstViewController.m */,
 				F9300DA8160942DE00887EBF /* TBASecondViewController.h */,
@@ -185,7 +182,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9300D97160942DE00887EBF /* InfoPlist.strings in Resources */,
-				F9300DA0160942DE00887EBF /* MainStoryboard.storyboard in Resources */,
 				F925CA26160D134F000BBB1C /* Screen Shot 2012-09-21 at 2.25.15 PM.png in Resources */,
 				F925CA28160D1386000BBB1C /* Screen Shot 2012-09-21 at 2.28.06 PM.png in Resources */,
 				F925CA2A160D1964000BBB1C /* Default-568h@2x.png in Resources */,
@@ -219,14 +215,6 @@
 				F9300D96160942DE00887EBF /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F9300D9E160942DE00887EBF /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9300D9F160942DE00887EBF /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -9,16 +9,27 @@
 #import "TBAAppDelegate.h"
 
 @interface TBAAppDelegate ()
-@property (strong, nonatomic) NSDate *lastLoad;
+@property UITabBarController *tabBarController;
 @end
 
 @implementation TBAAppDelegate
 
-@synthesize lastLoad = _lastLoad;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    
+    UIViewController* announcementsViewController = [[UIViewController alloc] init];
+    UIViewController* diningHallsViewController = [[UIViewController alloc] init];
+    
+    NSArray* controllers = [NSArray arrayWithObjects:announcementsViewController, diningHallsViewController, nil];
+    self.tabBarController.viewControllers = controllers;
+
+    self.window.rootViewController = self.tabBarController;
+
     return YES;
 }
 							
