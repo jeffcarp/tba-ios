@@ -1,15 +1,15 @@
 //
-//  TBASecondViewController.m
+//  DiningHallsViewController.m
 //  TBA2
 //
 //  Created by Jeff Carpenter on 9/18/12.
 //  Copyright (c) 2012 Jeff Carpenter. All rights reserved.
 //
 
-#import "TBASecondViewController.h"
+#import "DiningHallsViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface TBASecondViewController () <UIScrollViewDelegate, UIWebViewDelegate>
+@interface DiningHallsViewController () <UIScrollViewDelegate, UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *diningHallView;
 @property (weak, nonatomic) IBOutlet UIButton *danaButton;
@@ -18,7 +18,7 @@
 @property (strong, nonatomic) IBOutlet UITabBarItem *secondButton;
 @end
 
-@implementation TBASecondViewController
+@implementation DiningHallsViewController
 @synthesize scrollView;
 @synthesize diningHallView;
 @synthesize danaButton;
@@ -26,63 +26,76 @@
 @synthesize bobsButton;
 @synthesize secondButton;
 
+- (id)init
+{
+    self = [super init];
+    if(self)
+    {
+        UIImage* anImage = [UIImage imageNamed:@"125-food.png"];
+        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Dining Halls" image:anImage tag:1];
+        self.tabBarItem = theItem;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Initialize dining hall picker bar
-        
-    [fossButton setTitleColor:[UIColor colorWithWhite: 1 alpha: 1.0] forState:UIControlStateNormal];
-    [danaButton setTitleColor:[UIColor colorWithWhite: 0.1 alpha: 1.0] forState:UIControlStateNormal];
-    [bobsButton setTitleColor:[UIColor colorWithWhite: 0.1 alpha: 1.0] forState:UIControlStateNormal];
 
-    [fossButton setTitleColor:[UIColor colorWithWhite: 0.2 alpha: 1.0] forState:UIControlStateHighlighted];
-    [danaButton setTitleColor:[UIColor colorWithWhite: 0.2 alpha: 1.0] forState:UIControlStateHighlighted];
-    [bobsButton setTitleColor:[UIColor colorWithWhite: 0.2 alpha: 1.0] forState:UIControlStateHighlighted];
     
-    // Spin up loading spinners
-    
-    [scrollView setBackgroundColor:[UIColor darkGrayColor]];
-
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
-    // 3 views for 3 dining halls
-    NSInteger numberOfViews = 3;
-    
-    scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * numberOfViews, scrollView.frame.size.height);
-    
-    for (int i = 0; i < numberOfViews; i++) {
-        
-        CGFloat xOrigin = i * scrollView.frame.size.width;
-        CGFloat xCenter = self.view.center.x + (self.view.bounds.size.width * i);
-        
-        UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        activityIndicator.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height);
-        activityIndicator.center = CGPointMake(xCenter, self.view.center.y-50.0);
-        activityIndicator.tag = i+1;
-        [scrollView addSubview:activityIndicator];
-        
-        [activityIndicator startAnimating];
-        activityIndicator.hidden = FALSE;
-        
-        UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(xOrigin, 0, scrollView.frame.size.width, scrollView.frame.size.height)];
-        webView.delegate = self;
-        
-        NSURL *url;
-        if (i == 0) {
-            url = [NSURL URLWithString:@"http://announcements.io/mobile/foss"];
-        } else if (i == 1) {
-            url = [NSURL URLWithString:@"http://announcements.io/mobile/dana"];
-        } else if (i == 2) {
-            url = [NSURL URLWithString:@"http://announcements.io/mobile/bobs"];
-        }
-
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-        [webView loadRequest:requestObj];
-        webView.hidden = TRUE;
-        webView.tag = i+4;
-        [scrollView addSubview:webView];
-    }
+//    // Initialize dining hall picker bar
+//        
+//    [fossButton setTitleColor:[UIColor colorWithWhite: 1 alpha: 1.0] forState:UIControlStateNormal];
+//    [danaButton setTitleColor:[UIColor colorWithWhite: 0.1 alpha: 1.0] forState:UIControlStateNormal];
+//    [bobsButton setTitleColor:[UIColor colorWithWhite: 0.1 alpha: 1.0] forState:UIControlStateNormal];
+//
+//    [fossButton setTitleColor:[UIColor colorWithWhite: 0.2 alpha: 1.0] forState:UIControlStateHighlighted];
+//    [danaButton setTitleColor:[UIColor colorWithWhite: 0.2 alpha: 1.0] forState:UIControlStateHighlighted];
+//    [bobsButton setTitleColor:[UIColor colorWithWhite: 0.2 alpha: 1.0] forState:UIControlStateHighlighted];
+//    
+//    // Spin up loading spinners
+//    
+//    [scrollView setBackgroundColor:[UIColor darkGrayColor]];
+//
+//    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+//    
+//    // 3 views for 3 dining halls
+//    NSInteger numberOfViews = 3;
+//    
+//    scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * numberOfViews, scrollView.frame.size.height);
+//    
+//    for (int i = 0; i < numberOfViews; i++) {
+//        
+//        CGFloat xOrigin = i * scrollView.frame.size.width;
+//        CGFloat xCenter = self.view.center.x + (self.view.bounds.size.width * i);
+//        
+//        UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+//        activityIndicator.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height);
+//        activityIndicator.center = CGPointMake(xCenter, self.view.center.y-50.0);
+//        activityIndicator.tag = i+1;
+//        [scrollView addSubview:activityIndicator];
+//        
+//        [activityIndicator startAnimating];
+//        activityIndicator.hidden = FALSE;
+//        
+//        UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(xOrigin, 0, scrollView.frame.size.width, scrollView.frame.size.height)];
+//        webView.delegate = self;
+//        
+//        NSURL *url;
+//        if (i == 0) {
+//            url = [NSURL URLWithString:@"http://announcements.io/mobile/foss"];
+//        } else if (i == 1) {
+//            url = [NSURL URLWithString:@"http://announcements.io/mobile/dana"];
+//        } else if (i == 2) {
+//            url = [NSURL URLWithString:@"http://announcements.io/mobile/bobs"];
+//        }
+//
+//        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+//        [webView loadRequest:requestObj];
+//        webView.hidden = TRUE;
+//        webView.tag = i+4;
+//        [scrollView addSubview:webView];
+//    }
 }
 
 - (BOOL)canBecomeFirstResponder

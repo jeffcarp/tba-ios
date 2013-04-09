@@ -1,5 +1,5 @@
 //
-//  TBASecondViewController.h
+//  DiningHallsViewController.h
 //  TBA2
 //
 //  Created by Jeff Carpenter on 9/18/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TBASecondViewController : UIViewController
+@interface DiningHallsViewController : UIViewController
 
 @property(nonatomic,assign) id<UIWebViewDelegate> delegate;
 

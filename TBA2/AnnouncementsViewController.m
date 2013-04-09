@@ -1,40 +1,43 @@
 //
-//  TBAFirstViewController.m
+//  AnnouncementsViewController.m
 //  TBA2
 //   
 //  Created by Jeff Carpenter on 9/18/12.
 //  Copyright (c) 2012 Jeff Carpenter. All rights reserved.
 
 
-#import "TBAFirstViewController.h"
+#import "AnnouncementsViewController.h"
 
-@interface TBAFirstViewController () <UIWebViewDelegate>
+@interface AnnouncementsViewController () <UIWebViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UITabBarItem *firstButton;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property(nonatomic,assign) id<UIWebViewDelegate> delegate;
 
 @end
 
-@implementation TBAFirstViewController
+@implementation AnnouncementsViewController
 
-@synthesize webView = _webView;
-@synthesize firstButton;
-@synthesize activityIndicator;
+- (id)init
+{
+    self = [super init];
+    if(self)
+    {
+        UIImage* anImage = [UIImage imageNamed:@"124-bullhorn.png"];
+        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Announcements" image:anImage tag:0];
+        self.tabBarItem = theItem;
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [self deployActivityIndicator];
-    
-    // Start loading Web View
-    
-    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-49.0)];
-    self.webView.delegate = self;
-    NSURL *url = [NSURL URLWithString:@"http://announcements.io/mobile/dashboard"];
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:requestObj];   
+    UIView *stupidView = [[UIView alloc] initWithFrame:self.view.frame];
+    [stupidView setBackgroundColor:[UIColor underPageBackgroundColor]];
+    [self.view addSubview:stupidView];
 }
 
 - (BOOL)canBecomeFirstResponder

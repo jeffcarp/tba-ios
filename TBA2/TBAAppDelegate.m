@@ -7,9 +7,13 @@
 //
 
 #import "TBAAppDelegate.h"
+#import "AnnouncementsViewController.h"
+#import "DiningHallsViewController.h"
 
 @interface TBAAppDelegate ()
 @property UITabBarController *tabBarController;
+@property AnnouncementsViewController *announcementsViewController;
+@property DiningHallsViewController *diningHallsViewController;
 @end
 
 @implementation TBAAppDelegate
@@ -22,13 +26,14 @@
     
     self.tabBarController = [[UITabBarController alloc] init];
     
-    UIViewController* announcementsViewController = [[UIViewController alloc] init];
-    UIViewController* diningHallsViewController = [[UIViewController alloc] init];
+    self.announcementsViewController = [[AnnouncementsViewController alloc] init];
+    self.diningHallsViewController = [[DiningHallsViewController alloc] init];
     
-    NSArray* controllers = [NSArray arrayWithObjects:announcementsViewController, diningHallsViewController, nil];
+    NSArray* controllers = [NSArray arrayWithObjects:self.announcementsViewController, self.diningHallsViewController, nil];
     self.tabBarController.viewControllers = controllers;
 
     self.window.rootViewController = self.tabBarController;
+    self.tabBarController.selectedViewController = self.announcementsViewController;
 
     return YES;
 }

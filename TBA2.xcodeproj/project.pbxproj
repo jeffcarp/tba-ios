@@ -16,8 +16,8 @@
 		F9300D97160942DE00887EBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9300D95160942DE00887EBF /* InfoPlist.strings */; };
 		F9300D99160942DE00887EBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9300D98160942DE00887EBF /* main.m */; };
 		F9300D9D160942DE00887EBF /* TBAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9300D9C160942DE00887EBF /* TBAAppDelegate.m */; };
-		F9300DA3160942DE00887EBF /* TBAFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9300DA2160942DE00887EBF /* TBAFirstViewController.m */; };
-		F9300DAA160942DE00887EBF /* TBASecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9300DA9160942DE00887EBF /* TBASecondViewController.m */; };
+		F9300DA3160942DE00887EBF /* AnnouncementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9300DA2160942DE00887EBF /* AnnouncementsViewController.m */; };
+		F9300DAA160942DE00887EBF /* DiningHallsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9300DA9160942DE00887EBF /* DiningHallsViewController.m */; };
 		F9A96FDE1624DA5E0021C39D /* 124-bullhorn.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A96FDA1624DA5E0021C39D /* 124-bullhorn.png */; };
 		F9A96FDF1624DA5E0021C39D /* 124-bullhorn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A96FDB1624DA5E0021C39D /* 124-bullhorn@2x.png */; };
 		F9A96FE01624DA5E0021C39D /* 125-food.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A96FDC1624DA5E0021C39D /* 125-food.png */; };
@@ -38,10 +38,10 @@
 		F9300D9A160942DE00887EBF /* TBA2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBA2-Prefix.pch"; sourceTree = "<group>"; };
 		F9300D9B160942DE00887EBF /* TBAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBAAppDelegate.h; sourceTree = "<group>"; };
 		F9300D9C160942DE00887EBF /* TBAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBAAppDelegate.m; sourceTree = "<group>"; };
-		F9300DA1160942DE00887EBF /* TBAFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBAFirstViewController.h; sourceTree = "<group>"; };
-		F9300DA2160942DE00887EBF /* TBAFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBAFirstViewController.m; sourceTree = "<group>"; };
-		F9300DA8160942DE00887EBF /* TBASecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBASecondViewController.h; sourceTree = "<group>"; };
-		F9300DA9160942DE00887EBF /* TBASecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBASecondViewController.m; sourceTree = "<group>"; };
+		F9300DA1160942DE00887EBF /* AnnouncementsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnouncementsViewController.h; sourceTree = "<group>"; };
+		F9300DA2160942DE00887EBF /* AnnouncementsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncementsViewController.m; sourceTree = "<group>"; };
+		F9300DA8160942DE00887EBF /* DiningHallsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiningHallsViewController.h; sourceTree = "<group>"; };
+		F9300DA9160942DE00887EBF /* DiningHallsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiningHallsViewController.m; sourceTree = "<group>"; };
 		F9A96FDA1624DA5E0021C39D /* 124-bullhorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "124-bullhorn.png"; path = "Assets/124-bullhorn.png"; sourceTree = "<group>"; };
 		F9A96FDB1624DA5E0021C39D /* 124-bullhorn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "124-bullhorn@2x.png"; path = "Assets/124-bullhorn@2x.png"; sourceTree = "<group>"; };
 		F9A96FDC1624DA5E0021C39D /* 125-food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "125-food.png"; path = "Assets/125-food.png"; sourceTree = "<group>"; };
@@ -95,10 +95,10 @@
 				F9A96FD11624D9B90021C39D /* Assets */,
 				F9300D9B160942DE00887EBF /* TBAAppDelegate.h */,
 				F9300D9C160942DE00887EBF /* TBAAppDelegate.m */,
-				F9300DA1160942DE00887EBF /* TBAFirstViewController.h */,
-				F9300DA2160942DE00887EBF /* TBAFirstViewController.m */,
-				F9300DA8160942DE00887EBF /* TBASecondViewController.h */,
-				F9300DA9160942DE00887EBF /* TBASecondViewController.m */,
+				F9300DA1160942DE00887EBF /* AnnouncementsViewController.h */,
+				F9300DA2160942DE00887EBF /* AnnouncementsViewController.m */,
+				F9300DA8160942DE00887EBF /* DiningHallsViewController.h */,
+				F9300DA9160942DE00887EBF /* DiningHallsViewController.m */,
 				F9300D93160942DE00887EBF /* Supporting Files */,
 			);
 			path = TBA2;
@@ -201,8 +201,8 @@
 			files = (
 				F9300D99160942DE00887EBF /* main.m in Sources */,
 				F9300D9D160942DE00887EBF /* TBAAppDelegate.m in Sources */,
-				F9300DA3160942DE00887EBF /* TBAFirstViewController.m in Sources */,
-				F9300DAA160942DE00887EBF /* TBASecondViewController.m in Sources */,
+				F9300DA3160942DE00887EBF /* AnnouncementsViewController.m in Sources */,
+				F9300DAA160942DE00887EBF /* DiningHallsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
